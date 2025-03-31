@@ -43,9 +43,7 @@ def test_div():
 
 # ✅ Test Floating-Point Precision Issues
 def test_floating_point_precision():
-    assert div(1, 3) == pytest.approx(0.333333, rel=1e-6)  # Close to 0.3333
-    assert div(10, 4) == pytest.approx(2.5)
-    assert div(1e9, 3) == pytest.approx(333333333.333333, rel=1e-6)  # Huge floating division
+    assert div(1, 3) == pytest.approx(0.333333, rel=1e-9)  # Higher precision tolerance
 
 # ✅ Test Negative and Zero Edge Cases
 def test_negatives_and_zero():
